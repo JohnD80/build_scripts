@@ -1,11 +1,15 @@
 #!/usr/bin/env bash
 
-# This will set device model and TWRP version you are building
+# This will set-up the script
+export devicetree="https://github.com/hejsekvojtech/android_device_acer_Z500.git -b android-5.1"
+export brand="acer"
 export device="Z500"
 export twrpver="3.1.1-0"
 
+# Clonning device tree
+git clone $devicetree device/$brand/$device
+
 # Main building script
-make clean
 . build/envsetup.sh
 lunch omni_$device-eng
 make -j64 recoveryimage
@@ -16,4 +20,7 @@ mv recovery.img twrp-$twrpver-$device.img
 gdrive upload twrp-$twrpver-$device.img
 cd ../../../..
 make clean
+cd device
+rm -rf $brand
+cd ..
 echo "It's done!"
