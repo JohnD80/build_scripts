@@ -19,6 +19,8 @@ mv recovery.img twrp-$twrpver-$device.img
 # Uploading to Google Drive
 gdrive upload twrp-$twrpver-$device.img
 cd ../../../..
+
+# Cleaning the source
 make clean
 cd device
 rm -rf $brand
