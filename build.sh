@@ -1,13 +1,14 @@
 #!/usr/bin/env bash
 
-# This will set-up the script
-export devicetree="https://github.com/hejsekvojtech/android_device_acer_Z500.git -b android-5.1"
+# Before building, please edit these script settings to suit your device
+export devicetree="https://github.com/hejsekvojtech/android_device_acer_Z500.git"
 export brand="acer"
 export device="Z500"
 export twrpver="3.1.1-0"
+export branch="android-5.1"
 
 # Clonning device tree
-git clone $devicetree device/$brand/$device
+git clone $devicetree -b $branch device/$brand/$device
 
 # Main building script
 . build/envsetup.sh
@@ -25,4 +26,4 @@ make clean
 cd device
 rm -rf $brand
 cd ..
-echo "It's done!"
+echo "TWRP building and uploading is done!"
