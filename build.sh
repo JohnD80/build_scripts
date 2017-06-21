@@ -26,4 +26,4 @@ make clean
 cd device
 rm -rf $brand
 cd ..
-echo "TWRP building and uploading is done!"
+echo "twrp-$twrpver-$device.img has been built successfuly!"
