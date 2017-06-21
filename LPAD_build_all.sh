@@ -404,3 +404,5 @@ make clean
 cd device
 rm -rf $brand
 cd ..
+
+echo "Building was successful!"
