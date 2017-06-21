@@ -19,6 +19,9 @@
 # Build script for fully automated Team Win Recovery Project (TWRP) building
 # for all Liquid Porting And Development supported devices.
 
+# If you want to add your device to our build rooster, create pull request
+# or contact me at https://www.facebook.com/kh4os
+
 export twrpver="3.1.1-0"
 export branch="android-5.1"
 
@@ -401,6 +404,3 @@ make clean
 cd device
 rm -rf $brand
 cd ..
-
-# If you want to add your device to our build rooster, create pull request
-# or contact me on: https://www.facebook.com/kh4os
