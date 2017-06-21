@@ -405,4 +405,23 @@ cd device
 rm -rf $brand
 cd ..
 
+# Xiaomi Redmi Note 3G specific TWRP build configuration
+
+export devicetree="https://github.com/hejsekvojtech/android_device_xiaomi_lcsh92_wet_jb9.git"
+export brand="xiaomi"
+export device="lcsh92_wet_jb9"
+
+git clone $devicetree -b $branch device/$brand/$device
+. build/envsetup.sh
+lunch omni_$device-eng
+make -j64 recoveryimage
+cd out/target/product/$device
+mv recovery.img twrp-$twrpver-$device.img
+gdrive upload twrp-$twrpver-$device.img
+cd ../../../..
+make clean
+cd device
+rm -rf $brand
+cd ..
+
 echo "Building was successful!"
