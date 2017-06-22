@@ -9,6 +9,12 @@ To do that, place `gdrive_install.sh` to your home directory and run this comman
 bash gdrive_install.sh
 ```
 
+Or you can alternatively use megatools for uploading by installing it using this command:
+
+```sh
+bash megatools_install.sh
+```
+
 First of all you need to have TWRP recovery source synced. If so, clone this repository and copy build.sh file to the root folder of
 TWRP source you synced before.
 
