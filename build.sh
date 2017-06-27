@@ -1,13 +1,15 @@
 #!/usr/bin/env bash
 
 # Before building, please edit these script settings to suit your device
+
+export tree="https://github.com/hejsekvojtech/android_device_acer_Z500.git"
 export brand="acer"
 export device="Z500"
 export twrpver="3.1.1-0"
 export branch="android-5.1"
 
 # Clonning device tree
-git clone https://github.com/hejsekvojtech/android_device_$brand_$device.git -b $branch device/$brand/$device
+git clone $tree -b $branch device/$brand/$device
 
 # Main building script
 . build/envsetup.sh
