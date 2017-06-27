@@ -1,7 +1,7 @@
 To clone and start...
 ====================
 
-First of all you need to have TWRP recovery source synced (you can find it [here] (https://github.com/hejsekvojtech/android_bootable_recovery) with proper commands to sync it). If so, clone this repository and copy build.sh file to the root folder of
+First of all you need to have TWRP recovery source synced. You can find it [here] (https://github.com/hejsekvojtech/android_bootable_recovery) with proper commands to sync it. If so, clone this repository and copy build.sh file to the root folder of
 TWRP source you synced before.
 
 Before using these scripts, you need to have Google Drive installed on your Linux instance because the scripts includes commands
