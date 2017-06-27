@@ -8,6 +8,8 @@ sudo apt-get install libtool libglib2.0-dev gobject-introspection libgmp3-dev ne
 wget http://megatools.megous.com/builds/megatools-1.9.98.tar.gz
 zcat megatools-1.9.98.tar.gz > megatools-1.9.98.tar
 tar -xf megatools-1.9.98.tar
+rm megatools-1.9.98.tar.gz
+rm megatools-1.9.98.tar
 cd megatools-1.9.98/
 ./configure
 make
