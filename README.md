@@ -35,6 +35,7 @@ After installing required utilities you have to configure script you want to use
 `export device=`
 `export branch=`
 `export twrpver=`
+`export lineagever=`
 
 Once your script is set-up, place it to the root of TWRP or LineageOS source. If you don't have it synced yet, you can use these links:
 
