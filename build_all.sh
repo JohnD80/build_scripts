@@ -445,4 +445,24 @@ cd device
 rm -rf $brand
 cd ..
 
+# Lenovo S860 specific TWRP build configuration
+
+export device_tree="https://github.com/hejsekvojtech/android_device_lenovo_S860.git"
+export brand="lenovo"
+export device="S860"
+
+git clone $device_tree -b $branch device/$brand/$device
+. build/envsetup.sh
+lunch omni_$device-eng
+make -j64 recoveryimage
+cd out/target/product/$device
+mv recovery.img twrp-$twrpver-$device.img
+megarm /Root/LPAD/Devices/$device/Recovery/twrp-$twrpver-$device.img
+megaput --no-progress --path /Root/LPAD/Devices/$device/Recovery twrp-$twrpver-$device.img
+cd ../../../..
+make clean
+cd device
+rm -rf $brand
+cd ..
+
 echo "TWRP recovery $twrpver has been successfuly built for all LPAD supported devices!"
