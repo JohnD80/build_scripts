@@ -27,11 +27,11 @@ export branch="android-5.1"
 
 # Acer Liquid Z500 specific TWRP build configuration
 
-export tree="https://github.com/hejsekvojtech/android_device_acer_Z500.git"
+export device_tree="https://github.com/hejsekvojtech/android_device_acer_Z500.git"
 export brand="acer"
 export device="Z500"
 
-git clone $tree -b $branch device/$brand/$device
+git clone $device_tree -b $branch device/$brand/$device
 . build/envsetup.sh
 lunch omni_$device-eng
 make -j64 recoveryimage
@@ -47,11 +47,11 @@ cd ..
 
 # Lenovo A328 specific TWRP build configuration
 
-export tree="https://github.com/hejsekvojtech/android_device_lenovo_A328.git"
+export device_tree="https://github.com/hejsekvojtech/android_device_lenovo_A328.git"
 export brand="lenovo"
 export device="A328"
 
-git clone $tree -b $branch device/$brand/$device
+git clone $device_tree -b $branch device/$brand/$device
 . build/envsetup.sh
 lunch omni_$device-eng
 make -j64 recoveryimage
@@ -67,11 +67,11 @@ cd ..
 
 # Acer Liquid E700 specific TWRP build configuration
 
-export tree="https://github.com/hejsekvojtech/android_device_acer_E39.git"
+export device_tree="https://github.com/hejsekvojtech/android_device_acer_E39.git"
 export brand="acer"
 export device="E39"
 
-git clone $tree -b $branch device/$brand/$device
+git clone $device_tree -b $branch device/$brand/$device
 . build/envsetup.sh
 lunch omni_$device-eng
 make -j64 recoveryimage
@@ -87,11 +87,11 @@ cd ..
 
 # Acer Liquid X1 specific TWRP build configuration
 
-export tree="https://github.com/hejsekvojtech/android_device_acer_S53.git"
+export device_tree="https://github.com/hejsekvojtech/android_device_acer_S53.git"
 export brand="acer"
 export device="S53"
 
-git clone $tree -b $branch device/$brand/$device
+git clone $device_tree -b $branch device/$brand/$device
 . build/envsetup.sh
 lunch omni_$device-eng
 make -j64 recoveryimage
@@ -107,11 +107,11 @@ cd ..
 
 # Acer Liquid Jade Plus specific TWRP build configuration
 
-export tree="https://github.com/hejsekvojtech/android_device_acer_S55.git"
+export device_tree="https://github.com/hejsekvojtech/android_device_acer_S55.git"
 export brand="acer"
 export device="S55"
 
-git clone $tree -b $branch device/$brand/$device
+git clone $device_tree -b $branch device/$brand/$device
 . build/envsetup.sh
 lunch omni_$device-eng
 make -j64 recoveryimage
@@ -127,11 +127,11 @@ cd ..
 
 # Acer Liquid Z520 specific TWRP build configuration
 
-export tree="https://github.com/hejsekvojtech/android_device_acer_Z520.git"
+export device_tree="https://github.com/hejsekvojtech/android_device_acer_Z520.git"
 export brand="acer"
 export device="Z520"
 
-git clone $tree -b $branch device/$brand/$device
+git clone $device_tree -b $branch device/$brand/$device
 . build/envsetup.sh
 lunch omni_$device-eng
 make -j64 recoveryimage
@@ -147,11 +147,11 @@ cd ..
 
 # Huawei Honor 3C Lite specific TWRP build configuration
 
-export tree="https://github.com/hejsekvojtech/android_device_huawei_holly.git"
+export device_tree="https://github.com/hejsekvojtech/android_device_huawei_holly.git"
 export brand="huawei"
 export device="holly"
 
-git clone $tree -b $branch device/$brand/$device
+git clone $device_tree -b $branch device/$brand/$device
 . build/envsetup.sh
 lunch omni_$device-eng
 make -j64 recoveryimage
@@ -167,11 +167,11 @@ cd ..
 
 # Cherry Mobile Me Vibe specific TWRP build configuration
 
-export tree="https://github.com/hejsekvojtech/android_device_cherry_X170.git"
+export device_tree="https://github.com/hejsekvojtech/android_device_cherry_X170.git"
 export brand="cherry"
 export device="X170"
 
-git clone $tree -b $branch device/$brand/$device
+git clone $device_tree -b $branch device/$brand/$device
 . build/envsetup.sh
 lunch omni_$device-eng
 make -j64 recoveryimage
@@ -187,11 +187,11 @@ cd ..
 
 # Lava Iris X8 specific TWRP build configuration
 
-export tree="https://github.com/hejsekvojtech/android_device_lava_irisX8.git"
+export device_tree="https://github.com/hejsekvojtech/android_device_lava_irisX8.git"
 export brand="lava"
 export device="irisX8"
 
-git clone $tree -b $branch device/$brand/$device
+git clone $device_tree -b $branch device/$brand/$device
 . build/envsetup.sh
 lunch omni_$device-eng
 make -j64 recoveryimage
@@ -207,11 +207,11 @@ cd ..
 
 # Lenovo A536 specific TWRP build configuration
 
-export tree="https://github.com/hejsekvojtech/android_device_lenovo_A536.git"
+export device_tree="https://github.com/hejsekvojtech/android_device_lenovo_A536.git"
 export brand="lenovo"
 export device="A536"
 
-git clone $tree -b $branch device/$brand/$device
+git clone $device_tree -b $branch device/$brand/$device
 . build/envsetup.sh
 lunch omni_$device-eng
 make -j64 recoveryimage
@@ -227,11 +227,11 @@ cd ..
 
 # Lenovo IdeaTab A7-50 specific TWRP build configuration
 
-export tree="https://github.com/hejsekvojtech/android_device_lenovo_A3500.git"
+export device_tree="https://github.com/hejsekvojtech/android_device_lenovo_A3500.git"
 export brand="lenovo"
 export device="A3500"
 
-git clone $tree -b $branch device/$brand/$device
+git clone $device_tree -b $branch device/$brand/$device
 . build/envsetup.sh
 lunch omni_$device-eng
 make -j64 recoveryimage
@@ -247,11 +247,11 @@ cd ..
 
 # Lenovo S650 specific TWRP build configuration
 
-export tree="https://github.com/hejsekvojtech/android_device_lenovo_S650_ROW.git"
+export device_tree="https://github.com/hejsekvojtech/android_device_lenovo_S650_ROW.git"
 export brand="lenovo"
 export device="S650_ROW"
 
-git clone $tree -b $branch device/$brand/$device
+git clone $device_tree -b $branch device/$brand/$device
 . build/envsetup.sh
 lunch omni_$device-eng
 make -j64 recoveryimage
@@ -267,11 +267,11 @@ cd ..
 
 # Micromax Canvas Selfie Lens Q345 specific TWRP build configuration
 
-export tree="https://github.com/hejsekvojtech/android_device_micromax_Q345.git"
+export device_tree="https://github.com/hejsekvojtech/android_device_micromax_Q345.git"
 export brand="micromax"
 export device="Q345"
 
-git clone $tree -b $branch device/$brand/$device
+git clone $device_tree -b $branch device/$brand/$device
 . build/envsetup.sh
 lunch omni_$device-eng
 make -j64 recoveryimage
@@ -287,11 +287,11 @@ cd ..
 
 # Oppo Neo 7 specific TWRP build configuration
 
-export tree="https://github.com/hejsekvojtech/android_device_oppo_A33w.git"
+export device_tree="https://github.com/hejsekvojtech/android_device_oppo_A33w.git"
 export brand="oppo"
 export device="A33w"
 
-git clone $tree -b $branch device/$brand/$device
+git clone $device_tree -b $branch device/$brand/$device
 . build/envsetup.sh
 lunch omni_$device-eng
 make -j64 recoveryimage
@@ -307,11 +307,11 @@ cd ..
 
 # Prestigio MultiPhone 5504 Duo specific TWRP build configuration
 
-export tree="https://github.com/hejsekvojtech/android_device_prestigio_PSP5504DUO.git"
+export device_tree="https://github.com/hejsekvojtech/android_device_prestigio_PSP5504DUO.git"
 export brand="prestigio"
 export device="PSP5504DUO"
 
-git clone $tree -b $branch device/$brand/$device
+git clone $device_tree -b $branch device/$brand/$device
 . build/envsetup.sh
 lunch omni_$device-eng
 make -j64 recoveryimage
@@ -327,11 +327,11 @@ cd ..
 
 # QMobile X70 specific TWRP build configuration
 
-export tree="https://github.com/hejsekvojtech/android_device_qmobile_J220.git"
+export device_tree="https://github.com/hejsekvojtech/android_device_qmobile_J220.git"
 export brand="qmobile"
 export device="J220"
 
-git clone $tree -b $branch device/$brand/$device
+git clone $device_tree -b $branch device/$brand/$device
 . build/envsetup.sh
 lunch omni_$device-eng
 make -j64 recoveryimage
@@ -347,11 +347,11 @@ cd ..
 
 # Symphony Xplorer V80 specific TWRP build configuration
 
-export tree="https://github.com/hejsekvojtech/android_device_symphony_V80.git"
+export device_tree="https://github.com/hejsekvojtech/android_device_symphony_V80.git"
 export brand="symphony"
 export device="V80"
 
-git clone $tree -b $branch device/$brand/$device
+git clone $device_tree -b $branch device/$brand/$device
 . build/envsetup.sh
 lunch omni_$device-eng
 make -j64 recoveryimage
@@ -367,11 +367,11 @@ cd ..
 
 # XOLO Omega 5.5 specific TWRP build configuration
 
-export tree="https://github.com/hejsekvojtech/android_device_xolo_omega_5_5.git"
+export device_tree="https://github.com/hejsekvojtech/android_device_xolo_omega_5_5.git"
 export brand="xolo"
 export device="omega_5_5"
 
-git clone $tree -b $branch device/$brand/$device
+git clone $device_tree -b $branch device/$brand/$device
 . build/envsetup.sh
 lunch omni_$device-eng
 make -j64 recoveryimage
@@ -387,11 +387,11 @@ cd ..
 
 # Intex Aqua Power HD specific TWRP build configuration
 
-export tree="https://github.com/hejsekvojtech/android_device_intex_Aqua_Power_HD.git"
+export device_tree="https://github.com/hejsekvojtech/android_device_intex_Aqua_Power_HD.git"
 export brand="intex"
 export device="Aqua_Power_HD"
 
-git clone $tree -b $branch device/$brand/$device
+git clone $device_tree -b $branch device/$brand/$device
 . build/envsetup.sh
 lunch omni_$device-eng
 make -j64 recoveryimage
@@ -407,11 +407,11 @@ cd ..
 
 # HTC Desire 620G dual sim specific TWRP build configuration
 
-export tree="https://github.com/hejsekvojtech/android_device_htc_a31mg_dug_htc_europe.git"
+export device_tree="https://github.com/hejsekvojtech/android_device_htc_a31mg_dug_htc_europe.git"
 export brand="htc"
 export device="a31mg_dug_htc_europe"
 
-git clone $tree -b $branch device/$brand/$device
+git clone $device_tree -b $branch device/$brand/$device
 . build/envsetup.sh
 lunch omni_$device-eng
 make -j64 recoveryimage
@@ -427,11 +427,11 @@ cd ..
 
 # Xiaomi Redmi Note 3G specific TWRP build configuration
 
-export tree="https://github.com/hejsekvojtech/android_device_xiaomi_lcsh92_wet_jb9.git"
+export device_tree="https://github.com/hejsekvojtech/android_device_xiaomi_lcsh92_wet_jb9.git"
 export brand="xiaomi"
 export device="lcsh92_wet_jb9"
 
-git clone $tree -b $branch device/$brand/$device
+git clone $device_tree -b $branch device/$brand/$device
 . build/envsetup.sh
 lunch omni_$device-eng
 make -j64 recoveryimage
