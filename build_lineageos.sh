@@ -31,6 +31,10 @@ export lineagever="13.0"
 git clone $device_tree -b $branch device/$brand/$device
 git clone $vendor_tree -b $branch vendor/$brand/$device
 
+# Patching source (some devices requires it)
+cd device/$brand/$device/patches
+. apply.sh
+
 # Main building script
 source build/envsetup.sh
 make update-api
