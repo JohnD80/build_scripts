@@ -25,6 +25,7 @@ export vendor_tree="https://github.com/hejsekvojtech/android_vendor_acer_Z500.gi
 export brand="acer"
 export device="Z500"
 export branch="cm-13.0"
+export lineagever="13.0"
 
 # Clonning device & vendor tree
 git clone $device_tree -b $branch device/$brand/$device
@@ -34,4 +35,21 @@ git clone $vendor_tree -b $branch vendor/$brand/$device
 source build/envsetup.sh
 make update-api
 brunch lineage_$device-userdebug
-echo "LineageOS has been built for your device successfuly!"
+
+date=`date +%Y%m%d`
+
+# Uploading to Google Drive
+# gdrive upload lineage-$lineagever-$date-UNOFFICIAL-$device.zip
+# cd ../../../..
+
+# Uploading to MEGA
+megaput --no-progress --path /Root/LPAD/Devices/$device/ROMs/Custom/LineageOS lineage-$lineagever-$date-UNOFFICIAL-$device.zip
+cd ../../../..
+
+# Cleaning the source
+make clean
+cd device
+rm -rf $brand
+cd ..
+
+echo "lineage-$lineagever-$date-UNOFFICIAL-$device.zip has been built and uploaded successfuly!"
