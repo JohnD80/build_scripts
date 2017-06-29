@@ -19,7 +19,6 @@
 # Build script for fully automated Team Win Recovery Project (TWRP) building.
 
 # Before building, please edit these script settings to suit your device
-
 export device_tree="https://github.com/hejsekvojtech/android_device_acer_Z500.git"
 export brand="acer"
 export device="Z500"
