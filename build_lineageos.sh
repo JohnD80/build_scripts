@@ -47,6 +47,8 @@ date=`date +%Y%m%d`
 # cd ../../../..
 
 # Uploading to MEGA
+
+cd out/target/product/$device
 megaput --no-progress --path /Root/LPAD/Devices/$device/ROMs/Custom/LineageOS lineage-$lineagever-$date-UNOFFICIAL-$device.zip
 cd ../../../..
 
