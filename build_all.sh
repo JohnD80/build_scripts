@@ -407,9 +407,9 @@ cd ..
 
 # HTC Desire 620G dual sim specific TWRP build configuration
 
-export device_tree="https://github.com/hejsekvojtech/android_device_htc_a31mg_dug_htc_europe.git"
+export device_tree="https://github.com/hejsekvojtech/android_device_htc_htc_a31mg_dug.git"
 export brand="htc"
-export device="a31mg_dug_htc_europe"
+export device="htc_a31mg_dug"
 
 git clone $device_tree -b $branch device/$brand/$device
 . build/envsetup.sh
@@ -490,6 +490,26 @@ cd ..
 export device_tree="https://github.com/hejsekvojtech/android_device_lge_b2lss.git"
 export brand="lge"
 export device="b2lss"
+
+git clone $device_tree -b $branch device/$brand/$device
+. build/envsetup.sh
+lunch omni_$device-eng
+make -j64 recoveryimage
+cd out/target/product/$device
+mv recovery.img twrp-$twrpver-$device.img
+megarm /Root/LPAD/Devices/$device/Recovery/twrp-$twrpver-$device.img
+megaput --no-progress --path /Root/LPAD/Devices/$device/Recovery twrp-$twrpver-$device.img
+cd ../../../..
+make clean
+cd device
+rm -rf $brand
+cd ..
+
+# HTC Desire 816G dual sim specific TWRP build configuration
+
+export device_tree="https://github.com/hejsekvojtech/android_device_htc_htc_a5mgp_dug"
+export brand="htc"
+export device="htc_a5mgp_dug"
 
 git clone $device_tree -b $branch device/$brand/$device
 . build/envsetup.sh
