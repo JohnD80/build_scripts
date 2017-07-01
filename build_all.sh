@@ -507,9 +507,29 @@ cd ..
 
 # HTC Desire 816G dual sim specific TWRP build configuration
 
-export device_tree="https://github.com/hejsekvojtech/android_device_htc_htc_a5mgp_dug"
+export device_tree="https://github.com/hejsekvojtech/android_device_htc_htc_a5mgp_dug.git"
 export brand="htc"
 export device="htc_a5mgp_dug"
+
+git clone $device_tree -b $branch device/$brand/$device
+. build/envsetup.sh
+lunch omni_$device-eng
+make -j64 recoveryimage
+cd out/target/product/$device
+mv recovery.img twrp-$twrpver-$device.img
+megarm /Root/LPAD/Devices/$device/Recovery/twrp-$twrpver-$device.img
+megaput --no-progress --path /Root/LPAD/Devices/$device/Recovery twrp-$twrpver-$device.img
+cd ../../../..
+make clean
+cd device
+rm -rf $brand
+cd ..
+
+# Xiaomi Redmi 1S TD specific TWRP build configuration
+
+export device_tree="https://github.com/hejsekvojtech/android_device_xiaomi_HM2014011.git"
+export brand="xiaomi"
+export device="HM2014011"
 
 git clone $device_tree -b $branch device/$brand/$device
 . build/envsetup.sh
