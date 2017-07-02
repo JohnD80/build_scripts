@@ -27,9 +27,9 @@ export branch="android-5.1"
 
 # Acer Liquid Z500 specific TWRP build configuration
 
-export device_tree="https://github.com/hejsekvojtech/android_device_acer_Z500.git"
+export device_tree="https://github.com/hejsekvojtech/android_device_acer_acer_Z500.git"
 export brand="acer"
-export device="Z500"
+export device="acer_Z500"
 
 git clone $device_tree -b $branch device/$brand/$device
 . build/envsetup.sh
