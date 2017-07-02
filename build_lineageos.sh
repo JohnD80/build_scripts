@@ -20,10 +20,10 @@
 
 # Before building, please edit these script settings to suit your device
 
-export device_tree="https://github.com/hejsekvojtech/android_device_acer_Z500.git"
-export vendor_tree="https://github.com/hejsekvojtech/android_vendor_acer_Z500.git"
+export device_tree="https://github.com/hejsekvojtech/android_device_acer_acer_Z500.git"
+export vendor_tree="https://github.com/hejsekvojtech/android_vendor_acer_acer_Z500.git"
 export brand="acer"
-export device="Z500"
+export device="acer_Z500"
 export branch="cm-13.0"
 export lineagever="13.0"
 
