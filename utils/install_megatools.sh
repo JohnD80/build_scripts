@@ -10,7 +10,8 @@ zcat megatools-1.9.98.tar.gz > megatools-1.9.98.tar
 tar -xf megatools-1.9.98.tar
 rm megatools-1.9.98.tar.gz
 rm megatools-1.9.98.tar
-cd megatools-1.9.98/
+mv megatools-1.9.98 MEGA
+cd MEGA
 ./configure
 make
 sudo make install
