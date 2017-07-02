@@ -18,4 +18,5 @@ echo [Login] >> ~/.megarc
 echo Username = your@email >> ~/.megarc
 echo Password = yourpassword >> ~/.megarc
 nano ~/.megarc
+cd ~
 echo MEGA is now fully set-up on your Linux computer
