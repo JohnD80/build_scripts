@@ -1,5 +1,4 @@
-Get started with scripts
-=======================
+# Get started with scripts
 
 This repository contains some useful bash scripts for fully automated building of LineageOS based ROMs or TWRP recovery
 for your device. These bash based scripts are easy to use and they just needs to be executed in terminal from the root folder
@@ -11,17 +10,10 @@ of source you want to build from (LineageOS or TWRP)
   * build_twrp.sh - builds TWRP for one particular device
   
 * Misc. scripts
-  * install_gdrive.sh - installs Google Drive for uploading builds
   * install_megatools.sh - installs MEGA for uploading builds
 
-Before using these build scripts you have to install utilities for uploading builds. You can choose betwen MEGA (default in my scripts) and Google Drive.
-Install them by executing following commands:
-
-```sh
-bash bash install_gdrive.sh
-```
-
-or
+Before using these build scripts you have to install utilities for uploading builds. The following script is made for MEGA installation.
+Install it by executing following commands:
 
 ```sh
 bash install_megatools.sh

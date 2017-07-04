@@ -35,10 +35,6 @@ make -j64 recoveryimage
 cd out/target/product/$device
 mv recovery.img twrp-$twrpver-$device.img
 
-# Uploading to Google Drive
-# gdrive upload twrp-$twrpver-$device.img
-# cd ../../../..
-
 # Uploading to MEGA
 megarm /Root/LPAD/Devices/$device/Recovery/twrp-$twrpver-$device.img
 megaput --no-progress --path /Root/LPAD/Devices/$device/Recovery twrp-$twrpver-$device.img

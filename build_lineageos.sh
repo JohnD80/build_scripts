@@ -42,10 +42,6 @@ brunch lineage_$device-userdebug
 
 date=`date +%Y%m%d`
 
-# Uploading to Google Drive
-# gdrive upload lineage-$lineagever-$date-UNOFFICIAL-$device.zip
-# cd ../../../..
-
 # Uploading to MEGA
 
 cd out/target/product/$device
