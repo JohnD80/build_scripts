@@ -25,7 +25,6 @@ export brand="acer"
 export device="acer_Z500"
 export branch="cm-13.0"
 export lineagever="13.0"
-export CM_BUILDTYPE="RELEASE"
 
 # Clonning device & vendor tree
 git clone $device_tree -b $branch device/$brand/$device
@@ -44,7 +43,7 @@ date=`date +%Y%m%d`
 
 # Uploading to MEGA
 cd out/target/product/$device
-megaput --no-progress --path /Root/LPAD/Devices/$device/ROMs/Custom/LineageOS lineage-$lineagever-$date-$CM_BUILDTYPE-$device.zip
+megaput --no-progress --path /Root/LPAD/Devices/$device/ROMs/Custom/LineageOS lineage-$lineagever-$date-UNOFFICIAL-$device.zip
 cd ../../../..
 
 # Cleaning the source
@@ -53,4 +52,4 @@ cd device
 rm -rf $brand
 cd ..
 
-echo "lineage-$lineagever-$date-$CM_BUILDTYPE-$device.zip has been built and uploaded successfuly!"
+echo "lineage-$lineagever-$date-UNOFFICIAL-$device.zip has been built and uploaded successfuly!"
