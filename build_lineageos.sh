@@ -53,4 +53,4 @@ cd device
 rm -rf $brand
 cd ..
 
-echo "lineage-$lineagever-$date-UNOFFICIAL-$device.zip has been built and uploaded successfuly!"
+echo "lineage-$lineagever-$date-$CM_BUILDTYPE-$device.zip has been built and uploaded successfuly!"
