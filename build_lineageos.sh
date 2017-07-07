@@ -43,9 +43,8 @@ brunch lineage_$device-userdebug
 date=`date +%Y%m%d`
 
 # Uploading to MEGA
-
 cd out/target/product/$device
-megaput --no-progress --path /Root/LPAD/Devices/$device/ROMs/Custom/LineageOS lineage-$lineagever-$date-UNOFFICIAL-$device.zip
+megaput --no-progress --path /Root/LPAD/Devices/$device/ROMs/Custom/LineageOS lineage-$lineagever-$date-$CM_BUILDTYPE-$device.zip
 cd ../../../..
 
 # Cleaning the source
