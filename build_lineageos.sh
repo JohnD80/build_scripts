@@ -19,13 +19,13 @@
 # Build script for fully automated LineageOS building.
 
 # Before building, please edit these script settings to suit your device
-
 export device_tree="https://github.com/hejsekvojtech/android_device_acer_acer_Z500.git"
 export vendor_tree="https://github.com/hejsekvojtech/android_vendor_acer_acer_Z500.git"
 export brand="acer"
 export device="acer_Z500"
 export branch="cm-13.0"
 export lineagever="13.0"
+export CM_BUILDTYPE="RELEASE"
 
 # Clonning device & vendor tree
 git clone $device_tree -b $branch device/$brand/$device
