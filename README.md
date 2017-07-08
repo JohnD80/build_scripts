@@ -12,10 +12,11 @@ of source you want to build from (LineageOS or TWRP)
 * Misc. scripts
   * install_megatools.sh - installs MEGA for uploading builds
 
-Now we'll clone them and `cd` to them by running this command:
+Now we'll clone them and `cd` to them by running these commands:
 
 ```sh
 git clone https://github.com/hejsekvojtech/build_scripts.git
+cd build_scripts
 ```
 
 Before using these build scripts you have to install utilities for uploading builds. The following script is made for MEGA installation.
