@@ -34,6 +34,8 @@ git clone $vendor_tree -b $branch vendor/$brand/$device
 cd device/$brand/$device/patches
 . apply.sh
 
+export CM_BUILDTYPE=${CM_BUILDTYPE:-NIGHTLY}
+
 # Main building script
 source build/envsetup.sh
 make update-api
