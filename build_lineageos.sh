@@ -34,7 +34,7 @@ git clone $vendor_tree -b $branch vendor/$brand/$device
 cd device/$brand/$device/patches
 . apply.sh
 
-export CM_BUILDTYPE=${CM_BUILDTYPE:-NIGHTLY}
+export CM_BUILDTYPE="NIGHTLY"
 
 # Main building script
 source build/envsetup.sh
@@ -45,7 +45,7 @@ date=`date +%Y%m%d`
 
 # Uploading to MEGA
 cd out/target/product/$device
-megaput --no-progress --path /Root/LPAD/Devices/$device/ROMs/Custom/LineageOS lineage-$lineagever-$date-UNOFFICIAL-$device.zip
+megaput --no-progress --path /Root/LPAD/Devices/$device/ROMs/Custom/LineageOS lineage-$lineagever-$date-$CM_BUILDTYPE-$device.zip
 cd ../../../..
 
 # Cleaning the source
@@ -54,4 +54,4 @@ cd device
 rm -rf $brand
 cd ..
 
-echo "lineage-$lineagever-$date-UNOFFICIAL-$device.zip has been built and uploaded successfuly!"
+echo "lineage-$lineagever-$date-$CM_BUILDTYPE-$device.zip has been built and uploaded successfuly!"
