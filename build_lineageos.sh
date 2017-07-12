@@ -25,6 +25,7 @@ export brand="acer"
 export device="acer_Z500"
 export branch="cm-13.0"
 export lineagever="13.0"
+export CM_BUILDTYPE="NIGHTLY"
 
 # Clonning device & vendor tree
 git clone $device_tree -b $branch device/$brand/$device
@@ -33,8 +34,6 @@ git clone $vendor_tree -b $branch vendor/$brand/$device
 # Patching source (some devices requires it)
 cd device/$brand/$device/patches
 . apply.sh
-
-export CM_BUILDTYPE="NIGHTLY"
 
 # Main building script
 source build/envsetup.sh
@@ -45,7 +44,8 @@ date=`date +%Y%m%d`
 
 # Uploading to MEGA
 cd out/target/product/$device
-megaput --no-progress --path /Root/LPAD/Devices/$device/ROMs/Custom/LineageOS lineage-$lineagever-$date-$CM_BUILDTYPE-$device.zip
+mv lineage-$lineagever-$date-$CM_BUILDTYPE-$device.zip lineage-$lineagever-$date-nightly-$device-signed.zip
+megaput --no-progress --path /Root/LPAD/Devices/$device/ROMs/Custom/LineageOS lineage-$lineagever-$date-nightly-$device-signed.zip
 cd ../../../..
 
 # Cleaning the source
@@ -54,4 +54,4 @@ cd device
 rm -rf $brand
 cd ..
 
-echo "lineage-$lineagever-$date-$CM_BUILDTYPE-$device.zip has been built and uploaded successfuly!"
+echo "lineage-$lineagever-$date-nightly-$device-signed.zip has been built and uploaded successfuly!"
