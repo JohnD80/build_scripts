@@ -26,6 +26,7 @@ export device="acer_Z500"
 export branch="cm-13.0"
 export lineagever="13.0"
 export CM_BUILDTYPE="NIGHTLY"
+export WITH_SU=true
 
 # Clonning device & vendor tree
 git clone $device_tree -b $branch device/$brand/$device
