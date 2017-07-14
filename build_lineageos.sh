@@ -25,7 +25,6 @@ export brand="acer"
 export device="acer_Z500"
 export lineagever="13.0"
 export CM_BUILDTYPE="NIGHTLY"
-export cm_buildtype=${CM_BUILDTYPE,,}
 export WITH_SU=true
 
 # Clonning device & vendor tree
@@ -45,8 +44,8 @@ date=`date +%Y%m%d`
 
 # Uploading to MEGA
 cd out/target/product/$device
-mv lineage-$lineagever-$date-$CM_BUILDTYPE-$device.zip lineage-$lineagever-$date-$cm_buildtype-$device-signed.zip
-megaput --no-progress --path /Root/LPAD/Devices/$device/ROMs/Custom/LineageOS lineage-$lineagever-$date-$cm_buildtype-$device-signed.zip
+megaput --no-progress --path /Root/LPAD/Devices/$device/ROMs/Custom/LineageOS lineage-$lineagever-$date-$CM_BUILDTYPE-$device.zip.md5sum
+megaput --no-progress --path /Root/LPAD/Devices/$device/ROMs/Custom/LineageOS lineage-$lineagever-$date-$CM_BUILDTYPE-$device.zip
 cd ../../../..
 
 # Cleaning the source
@@ -55,4 +54,4 @@ cd device
 rm -rf $brand
 cd ..
 
-echo "lineage-$lineagever-$date-$cm_buildtype-$device-signed.zip has been built and uploaded successfuly!"
+echo "lineage-$lineagever-$date-$CM_BUILDTYPE-$device.zip has been built and uploaded successfuly!"
